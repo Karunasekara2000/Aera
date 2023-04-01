@@ -5,9 +5,7 @@ from tensorflow import keras
 
 # load the pre-trained model
 model = keras.models.load_model('keras_model.h5')
-# data = np.ndarray(shape=(1,224,224,3), dtype=np.float32)
 
-# with Image.open("path/to/image.jpg") as img:
 # define the class labels
 class_labels = ['Short-Sleeve Shirt', 'Long-Sleeve Shirt', 'Skinny']
 
