@@ -63,39 +63,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : TryOnWidget(),
             ),
             FFRoute(
-              name: 'preference_page',
-              path: 'preferencePage',
-              builder: (context, params) => PreferencePageWidget(),
-            ),
-            FFRoute(
-              name: 'AR_MensTee',
-              path: 'aRMensTee',
-              builder: (context, params) => ARMensTeeWidget(),
-            ),
-            FFRoute(
-              name: 'AR_mensLong',
-              path: 'aRMensLong',
-              builder: (context, params) => ARMensLongWidget(),
-            ),
-            FFRoute(
-              name: 'AR_MensSkinn',
-              path: 'aRMensSkinn',
-              builder: (context, params) => ARMensSkinnWidget(),
-            ),
-            FFRoute(
-              name: 'AR_womensTee',
-              path: 'aRWomensTee',
-              builder: (context, params) => ARWomensTeeWidget(),
-            ),
-            FFRoute(
-              name: 'AR_womensLongslee',
-              path: 'aRWomensLongslee',
-              builder: (context, params) => ARWomensLongsleeWidget(),
-            ),
-            FFRoute(
-              name: 'AR_womenSkinn',
-              path: 'aRWomenSkinn',
-              builder: (context, params) => ARWomenSkinnWidget(),
+              name: 'User_Preference',
+              path: 'userPreference',
+              builder: (context, params) => UserPreferenceWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

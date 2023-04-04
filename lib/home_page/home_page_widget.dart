@@ -48,193 +48,183 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 color: Color(0xFF27272A),
                 shape: BoxShape.rectangle,
               ),
-              child: ListView(
-                padding: EdgeInsets.zero,
-                scrollDirection: Axis.vertical,
-                children: [
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              30.0, 0.0, 0.0, 0.0),
-                          child: Text(
-                            'Hi..!',
-                            style: FlutterFlowTheme.of(context)
-                                .headlineMedium
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .headlineMediumFamily,
-                                  color: Colors.white,
-                                  fontSize: 24.0,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .headlineMediumFamily),
-                                ),
-                          ),
-                        ),
-                        Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 30.0, 0.0),
-                            child: Image.asset(
-                              'assets/images/Group_15.png',
-                              width: MediaQuery.of(context).size.width * 0.3,
-                              height: 64.9,
-                              fit: BoxFit.contain,
+              child: Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: ListView(
+                  padding: EdgeInsets.zero,
+                  scrollDirection: Axis.vertical,
+                  children: [
+                    Align(
+                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            22.0, 40.0, 0.0, 0.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Image.asset(
+                                'assets/images/Group_15.png',
+                                width: MediaQuery.of(context).size.width * 0.35,
+                                height: 78.9,
+                                fit: BoxFit.contain,
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 5.0, 0.0, 0.0),
-                      child: Text(
-                        'Top Recommendations',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Poppins',
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context)
-                                      .bodyMediumFamily),
+                    Align(
+                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                        child: Text(
+                          'Top Recommendations',
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: 'Poppins',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Align(
+              alignment: AlignmentDirectional(0.0, 0.0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 350.0,
+                    height: 205.0,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF1A1A1C),
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    child: Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        scrollDirection: Axis.vertical,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                30.0, 20.0, 30.0, 0.0),
+                            child: Container(
+                              width: 70.0,
+                              height: 110.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xFF303033),
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/Frame_31.png',
+                                  width: 183.0,
+                                  height: 216.0,
+                                  fit: BoxFit.none,
+                                ),
+                              ),
                             ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                30.0, 17.0, 30.0, 0.0),
+                            child: Container(
+                              width: 100.0,
+                              height: 40.0,
+                              decoration: BoxDecoration(
+                                color: Color(0xFFAEFA24),
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                              child: InkWell(
+                                onTap: () async {
+                                  context.pushNamed('Try_on');
+                                },
+                                child: Stack(
+                                  children: [
+                                    Align(
+                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      child: Text(
+                                        'TryOn This Product',
+                                        style: GoogleFonts.getFont(
+                                          'Poppins',
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 11.0,
+                                        ),
+                                      ),
+                                    ),
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(-0.7, 0.0),
+                                      child: Icon(
+                                        Icons.view_in_ar,
+                                        color: Colors.black,
+                                        size: 30.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 350.0,
-                  height: 205.0,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF1A1A1C),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: ListView(
-                      padding: EdgeInsets.zero,
-                      scrollDirection: Axis.vertical,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              30.0, 20.0, 30.0, 0.0),
-                          child: Container(
-                            width: 70.0,
-                            height: 110.0,
-                            decoration: BoxDecoration(
-                              color: Color(0xFF303033),
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Image.asset(
-                                'assets/images/Frame_31.png',
-                                width: 183.0,
-                                height: 215.6,
-                                fit: BoxFit.none,
+            Align(
+              alignment: AlignmentDirectional(0.0, 0.0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            30.0, 20.0, 0.0, 0.0),
+                        child: Text(
+                          'Just for you',
+                          style: FlutterFlowTheme.of(context)
+                              .bodySmall
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodySmallFamily,
+                                color: Colors.white,
+                                fontWeight: FontWeight.normal,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodySmallFamily),
                               ),
-                            ),
-                          ),
                         ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              30.0, 17.0, 30.0, 0.0),
-                          child: Container(
-                            width: 100.0,
-                            height: 40.0,
-                            decoration: BoxDecoration(
-                              color: Color(0xFFAEFA24),
-                              borderRadius: BorderRadius.circular(9.0),
-                            ),
-                            child: InkWell(
-                              onTap: () async {
-                                context.pushNamed('Try_on');
-                              },
-                              child: Stack(
-                                children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Text(
-                                      'TryOn This Product',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Poppins',
-                                            color: Colors.black,
-                                            fontSize: 11.0,
-                                            fontWeight: FontWeight.w600,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily),
-                                          ),
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: AlignmentDirectional(-0.9, 0.0),
-                                    child: Icon(
-                                      Icons.view_in_ar,
-                                      color: Colors.black,
-                                      size: 30.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 12.0, 0.0, 12.0),
-                      child: Text(
-                        'Just for you',
-                        style: FlutterFlowTheme.of(context).bodySmall.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodySmallFamily,
-                              color: Colors.white,
-                              fontWeight: FontWeight.normal,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodySmallFamily),
-                            ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
             Align(
               alignment: AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
                 child: Wrap(
                   spacing: 10.0,
                   runSpacing: 8.0,
@@ -281,7 +271,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: Icon(
                                 Icons.view_in_ar,
                                 color: Color(0xFFAEFA24),
-                                size: 30.0,
+                                size: 20.0,
                               ),
                             ),
                           ],
@@ -314,155 +304,23 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 onTap: () async {
-                                  context.pushNamed('AR_womensTee');
+                                  context.pushNamed(
+                                    'Try_on',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType:
+                                            PageTransitionType.bottomToTop,
+                                      ),
+                                    },
+                                  );
                                 },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
                                   child: Image.asset(
                                     'assets/images/result.png',
-                                    width: 187.4,
-                                    height: 216.6,
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.9, -0.9),
-                              child: Icon(
-                                Icons.view_in_ar,
-                                color: Color(0xFFAEFA24),
-                                size: 30.0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 4.0, 0.0, 0.0),
-                          child: Text(
-                            'Men\'s Black T-shirt',
-                            style: FlutterFlowTheme.of(context)
-                                .bodySmall
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodySmallFamily,
-                                  color: Colors.white,
-                                  fontSize: 12.0,
-                                  fontWeight: FontWeight.w300,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodySmallFamily),
-                                ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 4.0, 0.0, 0.0),
-                          child: Text(
-                            'women\'s Black T-shirt',
-                            style: FlutterFlowTheme.of(context)
-                                .bodySmall
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodySmallFamily,
-                                  color: Colors.white,
-                                  fontSize: 12.0,
-                                  fontWeight: FontWeight.w300,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodySmallFamily),
-                                ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        width: 164.0,
-                        height: 164.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF1A1A1C),
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x3600000F),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(-0.14, -0.72),
-                              child: InkWell(
-                                onTap: () async {
-                                  context.pushNamed('AR_mensLong');
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/WhatsAppImage2023-03-04at15.31.57_900x-removebg-preview.png',
-                                    width: 177.1,
-                                    height: 186.8,
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.9, -0.9),
-                              child: Icon(
-                                Icons.view_in_ar,
-                                color: Color(0xFFAEFA24),
-                                size: 30.0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        width: 164.0,
-                        height: 164.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF1A1A1C),
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x3600000F),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: InkWell(
-                                onTap: () async {
-                                  context.pushNamed('AR_womensLongslee');
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/DUL09140_900x-removebg-preview.png',
-                                    width: 177.1,
-                                    height: 186.8,
+                                    width: 187.0,
+                                    height: 217.0,
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -473,56 +331,60 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: Icon(
                                 Icons.view_in_ar,
                                 color: Color(0xFF4D4D4D),
-                                size: 30.0,
+                                size: 20.0,
                               ),
                             ),
                           ],
                         ),
                       ),
                     ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 4.0, 0.0, 0.0),
-                          child: Text(
-                            'Essential Men\'s Long Sleeve',
-                            style: FlutterFlowTheme.of(context)
-                                .bodySmall
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodySmallFamily,
-                                  color: Colors.white,
-                                  fontSize: 11.0,
-                                  fontWeight: FontWeight.w300,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodySmallFamily),
-                                ),
-                          ),
+                    Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Men\'s Black T-shirt',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    fontSize: 11.0,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodySmallFamily),
+                                  ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  8.0, 0.0, 0.0, 0.0),
+                              child: Text(
+                                'Women\'s Black T-shirt',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodySmall
+                                    .override(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.white,
+                                      fontSize: 11.0,
+                                      fontWeight: FontWeight.normal,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmallFamily),
+                                    ),
+                              ),
+                            ),
+                          ],
                         ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 4.0, 0.0, 0.0),
-                          child: Text(
-                            'Essential women\'s Long Sleeve',
-                            style: FlutterFlowTheme.of(context)
-                                .bodySmall
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodySmallFamily,
-                                  color: Colors.white,
-                                  fontSize: 11.0,
-                                  fontWeight: FontWeight.w300,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodySmallFamily),
-                                ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                     Padding(
                       padding:
@@ -547,7 +409,173 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 onTap: () async {
-                                  context.pushNamed('AR_MensSkinn');
+                                  context.pushNamed(
+                                    'Try_on',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType:
+                                            PageTransitionType.bottomToTop,
+                                      ),
+                                    },
+                                  );
+                                },
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  child: Image.asset(
+                                    'assets/images/WhatsAppImage2023-03-04at15.31.57_900x-removebg-preview.png',
+                                    width: 177.0,
+                                    height: 187.0,
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0.9, -0.9),
+                              child: Icon(
+                                Icons.view_in_ar,
+                                color: Color(0xFF4D4D4D),
+                                size: 20.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                      child: Container(
+                        width: 164.0,
+                        height: 164.0,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF1A1A1C),
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 4.0,
+                              color: Color(0x3600000F),
+                              offset: Offset(0.0, 2.0),
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: InkWell(
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'Try_on',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType:
+                                            PageTransitionType.bottomToTop,
+                                      ),
+                                    },
+                                  );
+                                },
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  child: Image.asset(
+                                    'assets/images/DUL09140_900x-removebg-preview.png',
+                                    width: 177.0,
+                                    height: 187.0,
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0.9, -0.9),
+                              child: Icon(
+                                Icons.view_in_ar,
+                                color: Color(0xFF4D4D4D),
+                                size: 20.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            'Essential Men\'s Long Sleeve',
+                            style: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  fontSize: 11.0,
+                                  fontWeight: FontWeight.normal,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodySmallFamily),
+                                ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                8.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              'Essential women\'s Long Sleeve',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    fontSize: 11.0,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodySmallFamily),
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                      child: Container(
+                        width: 164.0,
+                        height: 164.0,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF1A1A1C),
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 4.0,
+                              color: Color(0x3600000F),
+                              offset: Offset(0.0, 2.0),
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: InkWell(
+                                onTap: () async {
+                                  context.pushNamed(
+                                    'Try_on',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType:
+                                            PageTransitionType.bottomToTop,
+                                      ),
+                                    },
+                                  );
                                 },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
@@ -564,8 +592,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.9, -0.9),
                               child: Icon(
                                 Icons.view_in_ar,
-                                color: Color(0xFFAEFA24),
-                                size: 30.0,
+                                color: Color(0xFF4D4D4D),
+                                size: 20.0,
                               ),
                             ),
                           ],
@@ -595,7 +623,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 onTap: () async {
-                                  context.pushNamed('AR_womenSkinn');
+                                  context.pushNamed(
+                                    'Try_on',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType:
+                                            PageTransitionType.bottomToTop,
+                                      ),
+                                    },
+                                  );
                                 },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
@@ -612,8 +649,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.9, -0.9),
                               child: Icon(
                                 Icons.view_in_ar,
-                                color: Color(0xFFAEFA24),
-                                size: 30.0,
+                                color: Color(0xFF4D4D4D),
+                                size: 20.0,
                               ),
                             ),
                           ],
@@ -627,39 +664,32 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 4.0, 0.0, 0.0),
-                            child: Text(
-                              'Men\'s Black Skinny',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodySmallFamily,
-                                    color: Colors.white,
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w300,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodySmallFamily),
-                                  ),
-                            ),
+                          Text(
+                            'Men\'s Black Skinny',
+                            style: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  fontSize: 11.0,
+                                  fontWeight: FontWeight.w300,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodySmallFamily),
+                                ),
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 4.0, 0.0, 0.0),
+                                8.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Women\'s Black Skinny',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .bodySmallFamily,
+                                    fontFamily: 'Poppins',
                                     color: Colors.white,
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w300,
+                                    fontSize: 11.0,
+                                    fontWeight: FontWeight.normal,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
