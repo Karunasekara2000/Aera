@@ -14,7 +14,7 @@ def getShirtList(name):
     img_name_list = []
     # img_name_list_short = []
     
-    for i in range(1, 7):
+    for i in range(1, 8):
         # num_displayed = 0
         img = keras.preprocessing.image.load_img(f'tshirt/{i}.png', target_size=(224, 224))
         img_array = keras.preprocessing.image.img_to_array(img)
@@ -24,16 +24,14 @@ def getShirtList(name):
         # make predictions on the test image
         predictions = model.predict(img_array)
         predicted_class = class_labels[tf.argmax(predictions, axis=1)[0]]
-        # img_name_list.append(f'{i}.jpg')
-
+        # Extracts Long sleeve shirts
         if  predicted_class == "Long-Sleeve Shirt" and name == "Long-Sleeve Shirt":
             print(predicted_class)
-            img_name_list.append(f'{i}.jpg')
-            
-
+            img_name_list.append(f'{i}.png')
+        # Extracts short sleeve shirts    
         elif predicted_class == "Short-Sleeve Shirt" and name == "Short-Sleeve Shirt":
             print(predicted_class)
-            img_name_list.append(f'{i}.jpg')
+            img_name_list.append(f'{i}.png')
             
         
     return jsonify({'img_name_list': img_name_list})
