@@ -29,7 +29,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
-          curve: Curves.easeInOut,
+          curve: Curves.easeIn,
           delay: 0.ms,
           duration: 600.ms,
           begin: 0.0,
@@ -98,6 +98,9 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
+                    if (Navigator.of(context).canPop()) {
+                      context.pop();
+                    }
                     context.pushNamed(
                       'User_Preference',
                       extra: <String, dynamic>{
