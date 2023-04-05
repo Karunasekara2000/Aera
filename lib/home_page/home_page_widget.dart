@@ -201,7 +201,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            30.0, 20.0, 0.0, 0.0),
+                            30.0, 20.0, 0.0, 10.0),
                         child: Text(
                           'Just for you',
                           style: FlutterFlowTheme.of(context)
@@ -260,7 +260,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: InkWell(
                                 onTap: () async {
                                   await launchURL(
-                                      'https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=6116c6b82d274f0c9556db70784edd53&metadata=01');
+                                      'https://incarnage.com/products/carnage-stamp-tee-jet-black');
                                 },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
@@ -275,10 +275,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             Align(
                               alignment: AlignmentDirectional(0.9, -0.9),
-                              child: Icon(
-                                Icons.view_in_ar,
-                                color: Color(0xFFAEFA24),
-                                size: 20.0,
+                              child: InkWell(
+                                onTap: () async {
+                                  await launchURL(
+                                      'https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=6116c6b82d274f0c9556db70784edd53&metadata=01');
+                                },
+                                child: Icon(
+                                  Icons.view_in_ar,
+                                  color: Color(0xFFAEFA24),
+                                  size: 40.0,
+                                ),
                               ),
                             ),
                           ],
@@ -311,16 +317,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
+                                  await launchURL(
+                                      'https://incarnage.com/products/carnage-stamp-tee-jet-black');
                                 },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
@@ -338,7 +336,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: Icon(
                                 Icons.view_in_ar,
                                 color: Color(0xFF4D4D4D),
-                                size: 20.0,
+                                size: 40.0,
                               ),
                             ),
                           ],
@@ -355,20 +353,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Men\'s Black T-shirt',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.white,
-                                    fontSize: 11.0,
-                                    fontWeight: FontWeight.normal,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodySmallFamily),
-                                  ),
+                            Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    20.0, 0.0, 0.0, 0.0),
+                                child: Text(
+                                  'Men\'s Black T-shirt',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: Colors.white,
+                                        fontSize: 11.0,
+                                        fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmallFamily),
+                                      ),
+                                ),
+                              ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -416,16 +421,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
+                                  await launchURL(
+                                      'https://incarnage.com/products/essential-long-sleeve-tee-v2-jet-black');
                                 },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
@@ -443,7 +440,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: Icon(
                                 Icons.view_in_ar,
                                 color: Color(0xFF4D4D4D),
-                                size: 20.0,
+                                size: 40.0,
                               ),
                             ),
                           ],
@@ -473,16 +470,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
+                                  await launchURL(
+                                      'https://incarnage.com/products/carnage-athleisure-long-sleeve-crop-top-jet-black?_pos=20&_sid=97dfce105&_ss=r');
                                 },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
@@ -500,7 +489,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: Icon(
                                 Icons.view_in_ar,
                                 color: Color(0xFF4D4D4D),
-                                size: 20.0,
+                                size: 40.0,
                               ),
                             ),
                           ],
@@ -514,25 +503,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Text(
-                            'Essential Men\'s Long Sleeve',
-                            style: FlutterFlowTheme.of(context)
-                                .bodySmall
-                                .override(
-                                  fontFamily: 'Poppins',
-                                  color: Colors.white,
-                                  fontSize: 11.0,
-                                  fontWeight: FontWeight.normal,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodySmallFamily),
-                                ),
-                          ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 0.0, 0.0),
+                                15.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Essential women\'s Long Sleeve',
+                              'Essential Men\'s Long Sleeve',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -546,6 +521,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .bodySmallFamily),
                                   ),
                             ),
+                          ),
+                          Text(
+                            'Essential women\'s Long Sleeve',
+                            style: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  fontSize: 11.0,
+                                  fontWeight: FontWeight.normal,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodySmallFamily),
+                                ),
                           ),
                         ],
                       ),
@@ -573,23 +562,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
+                                  await launchURL(
+                                      'https://incarnage.com/products/stamp-drop-hole-tank');
                                 },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
                                   child: Image.asset(
                                     'assets/images/A7304349_900x-removebg-preview.png',
-                                    width: 182.7,
-                                    height: 215.7,
+                                    width: 183.0,
+                                    height: 216.0,
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -600,7 +581,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: Icon(
                                 Icons.view_in_ar,
                                 color: Color(0xFF4D4D4D),
-                                size: 20.0,
+                                size: 40.0,
                               ),
                             ),
                           ],
@@ -630,23 +611,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: InkWell(
                                 onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
+                                  await launchURL(
+                                      'https://incarnage.com/products/carnage-tie-top-tank-jet-black');
                                 },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
                                   child: Image.asset(
                                     'assets/images/A7403461_900x-removebg-preview.png',
-                                    width: 183.1,
-                                    height: 212.7,
+                                    width: 183.0,
+                                    height: 213.0,
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -657,7 +630,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: Icon(
                                 Icons.view_in_ar,
                                 color: Color(0xFF4D4D4D),
-                                size: 20.0,
+                                size: 40.0,
                               ),
                             ),
                           ],
@@ -671,19 +644,24 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Text(
-                            'Men\'s Black Skinny',
-                            style: FlutterFlowTheme.of(context)
-                                .bodySmall
-                                .override(
-                                  fontFamily: 'Poppins',
-                                  color: Colors.white,
-                                  fontSize: 11.0,
-                                  fontWeight: FontWeight.w300,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodySmallFamily),
-                                ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                10.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              'Men\'s Black Skinny',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodySmall
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    fontSize: 11.0,
+                                    fontWeight: FontWeight.w300,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodySmallFamily),
+                                  ),
+                            ),
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
