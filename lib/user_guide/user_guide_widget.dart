@@ -48,13 +48,6 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                if (Theme.of(context).brightness == Brightness.dark)
-                  Image.network(
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/skelaton-skreens-0qzrnm/assets/vqv7qh90o0x6/logo_white.png',
-                    width: 200.0,
-                    height: 100.0,
-                    fit: BoxFit.fitHeight,
-                  ),
                 if (!(Theme.of(context).brightness == Brightness.dark))
                   Padding(
                     padding:
