@@ -158,7 +158,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 child: Stack(
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          AlignmentDirectional(0.05, 0.0),
                                       child: Text(
                                         'TryOn This Product',
                                         style: GoogleFonts.getFont(
@@ -256,13 +257,19 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           children: [
                             Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20.0),
-                                child: Image.asset(
-                                  'assets/images/DUL03708_900x-removebg-preview.png',
-                                  width: 196.4,
-                                  height: 196.5,
-                                  fit: BoxFit.contain,
+                              child: InkWell(
+                                onTap: () async {
+                                  await launchURL(
+                                      'https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=6116c6b82d274f0c9556db70784edd53&metadata=01');
+                                },
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  child: Image.asset(
+                                    'assets/images/DUL03708_900x-removebg-preview.png',
+                                    width: 196.4,
+                                    height: 196.5,
+                                    fit: BoxFit.contain,
+                                  ),
                                 ),
                               ),
                             ),
@@ -480,7 +487,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
                                   child: Image.asset(
-                                    'assets/images/DUL09140_900x-removebg-preview.png',
+                                    'assets/images/DUL09138_4dce11af-c5aa-4291-9ede-2a65be1f9e19_900x-removebg-preview.png',
                                     width: 177.0,
                                     height: 187.0,
                                     fit: BoxFit.contain,

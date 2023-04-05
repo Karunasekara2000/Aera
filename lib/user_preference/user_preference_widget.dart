@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -82,68 +83,71 @@ class _UserPreferenceWidgetState extends State<UserPreferenceWidget> {
                               color: Color(0xFF202020),
                               borderRadius: BorderRadius.circular(12.0),
                             ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/DUL03708_900x-removebg-preview.png',
-                                    width: 100.0,
-                                    height: 95.0,
-                                    fit: BoxFit.fitHeight,
-                                  ),
-                                ),
-                                Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        50.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      'Casual Tees',
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .override(
-                                            fontFamily: 'Poppins',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBtnText,
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleMediumFamily),
+                            child: InkWell(
+                              onTap: () async {
+                                _model.apiResultikd = await LongSlSHCall.call();
+                                if ((_model.apiResultikd?.succeeded ?? true)) {
+                                  await showDialog(
+                                    context: context,
+                                    builder: (alertDialogContext) {
+                                      return AlertDialog(
+                                        title: Text('HEllo'),
+                                        content: Text('GODA WADE'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                alertDialogContext),
+                                            child: Text('Ok'),
                                           ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                }
+
+                                setState(() {});
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.asset(
+                                      'assets/images/DUL03708_900x-removebg-preview.png',
+                                      width: 100.0,
+                                      height: 95.0,
+                                      fit: BoxFit.fitHeight,
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      30.0, 0.0, 0.0, 0.0),
-                                  child: Theme(
-                                    data: ThemeData(
-                                      checkboxTheme: CheckboxThemeData(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(6.0),
-                                        ),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          50.0, 0.0, 0.0, 0.0),
+                                      child: Text(
+                                        'Casual Tees',
+                                        style: FlutterFlowTheme.of(context)
+                                            .titleMedium
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBtnText,
+                                              fontSize: 18.0,
+                                              fontWeight: FontWeight.w500,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleMediumFamily),
+                                            ),
                                       ),
-                                      unselectedWidgetColor:
-                                          FlutterFlowTheme.of(context).accent2,
-                                    ),
-                                    child: Checkbox(
-                                      value: _model.checkboxValue1 ??= true,
-                                      onChanged: (newValue) async {
-                                        setState(() =>
-                                            _model.checkboxValue1 = newValue!);
-                                      },
-                                      activeColor:
-                                          FlutterFlowTheme.of(context).primary,
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -193,36 +197,6 @@ class _UserPreferenceWidgetState extends State<UserPreferenceWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .titleMediumFamily),
                                           ),
-                                    ),
-                                  ),
-                                ),
-                                Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 0.0, 0.0),
-                                    child: Theme(
-                                      data: ThemeData(
-                                        checkboxTheme: CheckboxThemeData(
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(6.0),
-                                          ),
-                                        ),
-                                        unselectedWidgetColor:
-                                            FlutterFlowTheme.of(context)
-                                                .accent2,
-                                      ),
-                                      child: Checkbox(
-                                        value: _model.checkboxValue2 ??= false,
-                                        onChanged: (newValue) async {
-                                          setState(() => _model.checkboxValue2 =
-                                              newValue!);
-                                        },
-                                        activeColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                      ),
                                     ),
                                   ),
                                 ),
@@ -276,31 +250,6 @@ class _UserPreferenceWidgetState extends State<UserPreferenceWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .titleMediumFamily),
                                           ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      65.0, 0.0, 0.0, 0.0),
-                                  child: Theme(
-                                    data: ThemeData(
-                                      checkboxTheme: CheckboxThemeData(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(6.0),
-                                        ),
-                                      ),
-                                      unselectedWidgetColor:
-                                          FlutterFlowTheme.of(context).accent2,
-                                    ),
-                                    child: Checkbox(
-                                      value: _model.checkboxValue3 ??= false,
-                                      onChanged: (newValue) async {
-                                        setState(() =>
-                                            _model.checkboxValue3 = newValue!);
-                                      },
-                                      activeColor:
-                                          FlutterFlowTheme.of(context).primary,
                                     ),
                                   ),
                                 ),
