@@ -48,17 +48,15 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                if (!(Theme.of(context).brightness == Brightness.dark))
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
-                    child: Image.asset(
-                      'assets/images/logo.png',
-                      width: 200.0,
-                      height: 100.0,
-                      fit: BoxFit.fitHeight,
-                    ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    width: 200.0,
+                    height: 100.0,
+                    fit: BoxFit.fitHeight,
                   ),
+                ),
               ],
             ),
           ),
@@ -98,7 +96,7 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                                           'assets/images/Online_shopping-pana.svg',
                                           width: 350.0,
                                           height: 300.0,
-                                          fit: BoxFit.fitWidth,
+                                          fit: BoxFit.contain,
                                         ),
                                       ),
                                     ],
