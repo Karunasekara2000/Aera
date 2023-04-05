@@ -92,7 +92,10 @@ class _UserPreferenceWidgetState extends State<UserPreferenceWidget> {
                                     builder: (alertDialogContext) {
                                       return AlertDialog(
                                         title: Text('HEllo'),
-                                        content: Text('GODA WADE'),
+                                        content: Text(
+                                            (_model.apiResultikd?.jsonBody ??
+                                                    '')
+                                                .toString()),
                                         actions: [
                                           TextButton(
                                             onPressed: () => Navigator.pop(
