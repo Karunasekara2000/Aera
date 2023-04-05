@@ -14,9 +14,9 @@ def getShirtList(name):
     img_name_list = []
     # img_name_list_short = []
     
-    for i in range(1, 50):
+    for i in range(1, 7):
         # num_displayed = 0
-        img = keras.preprocessing.image.load_img(f'tshirt/{i}.jpg', target_size=(224, 224))
+        img = keras.preprocessing.image.load_img(f'tshirt/{i}.png', target_size=(224, 224))
         img_array = keras.preprocessing.image.img_to_array(img)
         img_array = tf.expand_dims(img_array, 0)
         img_array = keras.applications.mobilenet_v2.preprocess_input(img_array)
