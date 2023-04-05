@@ -70,8 +70,8 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: Image.asset(
                   'assets/images/Pattern.png',
-                  width: 390.0,
-                  height: 658.9,
+                  width: 408.6,
+                  height: 589.3,
                   fit: BoxFit.contain,
                 ),
               ),

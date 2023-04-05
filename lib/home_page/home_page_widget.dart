@@ -224,298 +224,137 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             ),
             Align(
               alignment: AlignmentDirectional(0.0, 0.0),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
-                child: Wrap(
-                  spacing: 10.0,
-                  runSpacing: 8.0,
-                  alignment: WrapAlignment.start,
-                  crossAxisAlignment: WrapCrossAlignment.start,
-                  direction: Axis.horizontal,
-                  runAlignment: WrapAlignment.start,
-                  verticalDirection: VerticalDirection.down,
-                  clipBehavior: Clip.none,
-                  children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        width: 164.0,
-                        height: 164.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF1A1A1C),
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x3600000F),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: InkWell(
-                                onTap: () async {
-                                  await launchURL(
-                                      'https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=6116c6b82d274f0c9556db70784edd53&metadata=01');
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/DUL03708_900x-removebg-preview.png',
-                                    width: 196.4,
-                                    height: 196.5,
-                                    fit: BoxFit.contain,
-                                  ),
+              child: Wrap(
+                spacing: 4.0,
+                runSpacing: 10.0,
+                alignment: WrapAlignment.center,
+                crossAxisAlignment: WrapCrossAlignment.start,
+                direction: Axis.horizontal,
+                runAlignment: WrapAlignment.start,
+                verticalDirection: VerticalDirection.down,
+                clipBehavior: Clip.none,
+                children: [
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                    child: Container(
+                      width: 164.0,
+                      height: 164.0,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF1A1A1C),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4.0,
+                            color: Color(0x3600000F),
+                            offset: Offset(0.0, 2.0),
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: Stack(
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: InkWell(
+                              onTap: () async {
+                                await launchURL(
+                                    'https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=6116c6b82d274f0c9556db70784edd53&metadata=01');
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/DUL03708_900x-removebg-preview.png',
+                                  width: 196.4,
+                                  height: 196.5,
+                                  fit: BoxFit.contain,
                                 ),
                               ),
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(0.9, -0.9),
-                              child: Icon(
-                                Icons.view_in_ar,
-                                color: Color(0xFFAEFA24),
-                                size: 20.0,
-                              ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0.9, -0.9),
+                            child: Icon(
+                              Icons.view_in_ar,
+                              color: Color(0xFFAEFA24),
+                              size: 20.0,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * 0.45,
-                        constraints: BoxConstraints(
-                          maxWidth: 164.0,
-                          maxHeight: 164.0,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Color(0xFF1A1A1C),
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x3600000F),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: InkWell(
-                                onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/result.png',
-                                    width: 187.0,
-                                    height: 217.0,
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.9, -0.9),
-                              child: Icon(
-                                Icons.view_in_ar,
-                                color: Color(0xFF4D4D4D),
-                                size: 20.0,
-                              ),
-                            ),
-                          ],
-                        ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.45,
+                      constraints: BoxConstraints(
+                        maxWidth: 164.0,
+                        maxHeight: 164.0,
                       ),
-                    ),
-                    Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Men\'s Black T-shirt',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.white,
-                                    fontSize: 11.0,
-                                    fontWeight: FontWeight.normal,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodySmallFamily),
-                                  ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 0.0, 0.0, 0.0),
-                              child: Text(
-                                'Women\'s Black T-shirt',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white,
-                                      fontSize: 11.0,
-                                      fontWeight: FontWeight.normal,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .bodySmallFamily),
+                      decoration: BoxDecoration(
+                        color: Color(0xFF1A1A1C),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4.0,
+                            color: Color(0x3600000F),
+                            offset: Offset(0.0, 2.0),
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: Stack(
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: InkWell(
+                              onTap: () async {
+                                context.pushNamed(
+                                  'Try_on',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.bottomToTop,
                                     ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        width: 164.0,
-                        height: 164.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF1A1A1C),
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x3600000F),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: InkWell(
-                                onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/WhatsAppImage2023-03-04at15.31.57_900x-removebg-preview.png',
-                                    width: 177.0,
-                                    height: 187.0,
-                                    fit: BoxFit.contain,
-                                  ),
+                                  },
+                                );
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/result.png',
+                                  width: 187.0,
+                                  height: 217.0,
+                                  fit: BoxFit.contain,
                                 ),
                               ),
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(0.9, -0.9),
-                              child: Icon(
-                                Icons.view_in_ar,
-                                color: Color(0xFF4D4D4D),
-                                size: 20.0,
-                              ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0.9, -0.9),
+                            child: Icon(
+                              Icons.view_in_ar,
+                              color: Color(0xFF4D4D4D),
+                              size: 20.0,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        width: 164.0,
-                        height: 164.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF1A1A1C),
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x3600000F),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: InkWell(
-                                onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/DUL09138_4dce11af-c5aa-4291-9ede-2a65be1f9e19_900x-removebg-preview.png',
-                                    width: 177.0,
-                                    height: 187.0,
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.9, -0.9),
-                              child: Icon(
-                                Icons.view_in_ar,
-                                color: Color(0xFF4D4D4D),
-                                size: 20.0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Essential Men\'s Long Sleeve',
+                            'Men\'s Black T-shirt',
                             style: FlutterFlowTheme.of(context)
                                 .bodySmall
                                 .override(
@@ -532,7 +371,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Essential women\'s Long Sleeve',
+                              'Women\'s Black T-shirt',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -550,165 +389,319 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ],
                       ),
                     ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        width: 164.0,
-                        height: 164.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF1A1A1C),
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x3600000F),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: InkWell(
-                                onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/A7304349_900x-removebg-preview.png',
-                                    width: 182.7,
-                                    height: 215.7,
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.9, -0.9),
-                              child: Icon(
-                                Icons.view_in_ar,
-                                color: Color(0xFF4D4D4D),
-                                size: 20.0,
-                              ),
-                            ),
-                          ],
-                        ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                    child: Container(
+                      width: 164.0,
+                      height: 164.0,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF1A1A1C),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4.0,
+                            color: Color(0x3600000F),
+                            offset: Offset(0.0, 2.0),
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        width: 164.0,
-                        height: 164.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF1A1A1C),
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x3600000F),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: InkWell(
-                                onTap: () async {
-                                  context.pushNamed(
-                                    'Try_on',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.bottomToTop,
-                                      ),
-                                    },
-                                  );
-                                },
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image.asset(
-                                    'assets/images/A7403461_900x-removebg-preview.png',
-                                    width: 183.1,
-                                    height: 212.7,
-                                    fit: BoxFit.contain,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.9, -0.9),
-                              child: Icon(
-                                Icons.view_in_ar,
-                                color: Color(0xFF4D4D4D),
-                                size: 20.0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      child: Stack(
                         children: [
-                          Text(
-                            'Men\'s Black Skinny',
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: InkWell(
+                              onTap: () async {
+                                context.pushNamed(
+                                  'Try_on',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.bottomToTop,
+                                    ),
+                                  },
+                                );
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/WhatsAppImage2023-03-04at15.31.57_900x-removebg-preview.png',
+                                  width: 177.0,
+                                  height: 187.0,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0.9, -0.9),
+                            child: Icon(
+                              Icons.view_in_ar,
+                              color: Color(0xFF4D4D4D),
+                              size: 20.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                    child: Container(
+                      width: 164.0,
+                      height: 164.0,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF1A1A1C),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4.0,
+                            color: Color(0x3600000F),
+                            offset: Offset(0.0, 2.0),
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: Stack(
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: InkWell(
+                              onTap: () async {
+                                context.pushNamed(
+                                  'Try_on',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.bottomToTop,
+                                    ),
+                                  },
+                                );
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/DUL09138_4dce11af-c5aa-4291-9ede-2a65be1f9e19_900x-removebg-preview.png',
+                                  width: 177.0,
+                                  height: 187.0,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0.9, -0.9),
+                            child: Icon(
+                              Icons.view_in_ar,
+                              color: Color(0xFF4D4D4D),
+                              size: 20.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text(
+                          'Essential Men\'s Long Sleeve',
+                          style: FlutterFlowTheme.of(context)
+                              .bodySmall
+                              .override(
+                                fontFamily: 'Poppins',
+                                color: Colors.white,
+                                fontSize: 11.0,
+                                fontWeight: FontWeight.normal,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodySmallFamily),
+                              ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              8.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            'Essential women\'s Long Sleeve',
                             style: FlutterFlowTheme.of(context)
                                 .bodySmall
                                 .override(
                                   fontFamily: 'Poppins',
                                   color: Colors.white,
                                   fontSize: 11.0,
-                                  fontWeight: FontWeight.w300,
+                                  fontWeight: FontWeight.normal,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .bodySmallFamily),
                                 ),
                           ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              'Women\'s Black Skinny',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    fontFamily: 'Poppins',
-                                    color: Colors.white,
-                                    fontSize: 11.0,
-                                    fontWeight: FontWeight.normal,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .bodySmallFamily),
-                                  ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                    child: Container(
+                      width: 164.0,
+                      height: 164.0,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF1A1A1C),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4.0,
+                            color: Color(0x3600000F),
+                            offset: Offset(0.0, 2.0),
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: Stack(
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: InkWell(
+                              onTap: () async {
+                                context.pushNamed(
+                                  'Try_on',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.bottomToTop,
+                                    ),
+                                  },
+                                );
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/A7304349_900x-removebg-preview.png',
+                                  width: 182.7,
+                                  height: 215.7,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0.9, -0.9),
+                            child: Icon(
+                              Icons.view_in_ar,
+                              color: Color(0xFF4D4D4D),
+                              size: 20.0,
                             ),
                           ),
                         ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                    child: Container(
+                      width: 164.0,
+                      height: 164.0,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF1A1A1C),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4.0,
+                            color: Color(0x3600000F),
+                            offset: Offset(0.0, 2.0),
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: Stack(
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: InkWell(
+                              onTap: () async {
+                                context.pushNamed(
+                                  'Try_on',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.bottomToTop,
+                                    ),
+                                  },
+                                );
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset(
+                                  'assets/images/A7403461_900x-removebg-preview.png',
+                                  width: 183.1,
+                                  height: 212.7,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0.9, -0.9),
+                            child: Icon(
+                              Icons.view_in_ar,
+                              color: Color(0xFF4D4D4D),
+                              size: 20.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text(
+                          'Men\'s Black Skinny',
+                          style: FlutterFlowTheme.of(context)
+                              .bodySmall
+                              .override(
+                                fontFamily: 'Poppins',
+                                color: Colors.white,
+                                fontSize: 11.0,
+                                fontWeight: FontWeight.w300,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodySmallFamily),
+                              ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              8.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            'Women\'s Black Skinny',
+                            style: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  fontSize: 11.0,
+                                  fontWeight: FontWeight.normal,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodySmallFamily),
+                                ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
