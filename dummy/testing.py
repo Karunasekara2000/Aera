@@ -10,12 +10,9 @@ def getShirtList(name):
     model = keras.models.load_model('keras_model.h5')
     # define the class labels
     class_labels = ['Short-Sleeve Shirt', 'Long-Sleeve Shirt', 'Skinny']
-    img_array_list = []
     img_name_list = []
-    # img_name_list_short = []
     
     for i in range(1, 8):
-        # num_displayed = 0
         img = keras.preprocessing.image.load_img(f'tshirt/{i}.png', target_size=(224, 224))
         img_array = keras.preprocessing.image.img_to_array(img)
         img_array = tf.expand_dims(img_array, 0)
