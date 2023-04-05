@@ -115,7 +115,7 @@ class _NavBarPageState extends State<NavBarPage> {
         activeColor: Color(0xFFAEFA24),
         tabBackgroundColor: Color(0x00000000),
         tabBorderRadius: 100.0,
-        tabMargin: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+        tabMargin: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 30.0),
         padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
         gap: 2.0,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
