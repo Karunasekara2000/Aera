@@ -103,6 +103,16 @@ class _UserPreferenceWidgetState extends State<UserPreferenceWidget> {
                                       );
                                     },
                                   );
+
+                                  context.pushNamed(
+                                    'Home_Page',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType: PageTransitionType.fade,
+                                      ),
+                                    },
+                                  );
                                 }
 
                                 setState(() {});

@@ -89,14 +89,21 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 20.0),
-                                        child: SvgPicture.asset(
-                                          'assets/images/Online_shopping-pana.svg',
-                                          width: 350.0,
-                                          height: 300.0,
-                                          fit: BoxFit.contain,
+                                      Expanded(
+                                        child: Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 20.0),
+                                            child: SvgPicture.asset(
+                                              'assets/images/Online_shopping-pana.svg',
+                                              width: 350.0,
+                                              height: 300.0,
+                                              fit: BoxFit.contain,
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ],
