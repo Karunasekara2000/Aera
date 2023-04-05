@@ -68,14 +68,11 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
             children: [
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
-                  child: Image.asset(
-                    'assets/images/Pattern.png',
-                    width: 390.0,
-                    height: 658.9,
-                    fit: BoxFit.contain,
-                  ),
+                child: Image.asset(
+                  'assets/images/Pattern.png',
+                  width: 390.0,
+                  height: 658.9,
+                  fit: BoxFit.contain,
                 ),
               ),
               Expanded(
