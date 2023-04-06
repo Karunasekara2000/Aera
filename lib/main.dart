@@ -72,8 +72,13 @@ class _MyAppState extends State<MyApp> {
   }
 }
 class GlobalData {
-  static String imagePathShortSL = "https://via.placeholder.com/300x300.png?text=No+Image";
+  static String imagePath1 = "https://via.placeholder.com/300x300.png?text=No+Image";
+  static String imagePath2 = "https://via.placeholder.com/300x300.png?text=No+Image";
+  static String imagePath3 = "https://via.placeholder.com/300x300.png?text=No+Image";
 }
+
+
+
 
 
 class NavBarPage extends StatefulWidget {

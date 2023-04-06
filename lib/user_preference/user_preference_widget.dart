@@ -88,35 +88,20 @@ class _UserPreferenceWidgetState extends State<UserPreferenceWidget> {
                             ),
                             child: InkWell(
                               onTap: () async {
-                                String _url = 'https://fbf2-2402-4000-12c0-4a3f-70ce-8ce5-68cd-433e.in.ngrok.io/edit/Short-Sleeve Shirt';
+                                String _url = 'http://127.0.0.1:5000/edit/Short-Sleeve Shirt';
                                 _model.apiResultikd = await LongSlSHCall.call();
                                 if ((_model.apiResultikd?.succeeded ?? true)) {
                                       var response = await http.get(Uri.parse(_url));
                                       var imageList = jsonDecode(response.body)['img_name_list'];
                                       if (imageList.length > 0) {
                                         setState(() {
-                                          GlobalData.imagePathShortSL = 'http://127.0.0.1:5000/tshirt/' + imageList[0];
+                                          GlobalData.imagePath1 = 'http://127.0.0.1:5000/tshirt/' + imageList[0];
+                                          GlobalData.imagePath2 = 'http://127.0.0.1:5000/tshirt/' + imageList[1];
+                                          GlobalData.imagePath3 = 'http://127.0.0.1:5000/tshirt/' + imageList[2];
+                    
                                           });
                                         }
-                                  // await showDialog(
-                                  //   context: context,
-                                  //   builder: (alertDialogContext) {
-                                  //     return AlertDialog(
-                                  //       title: Text('HEllo'),
-                                  //       content: Text(
-                                  //           (_model.apiResultikd?.jsonBody ??
-                                  //                   '')
-                                  //               .toString()),
-                                  //       actions: [
-                                  //         TextButton(
-                                  //           onPressed: () => Navigator.pop(
-                                  //               alertDialogContext),
-                                  //           child: Text('Ok'),
-                                  //         ),
-                                  //       ],
-                                  //     );
-                                  //   },
-                                  // );
+                             
 
                                   context.pushNamed(
                                     'Home_Page',
@@ -176,59 +161,86 @@ class _UserPreferenceWidgetState extends State<UserPreferenceWidget> {
                           ),
                         ),
                       ),
+                      // Generated code for this Container Widget...
+
+
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0, 0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              16.0, 8.0, 16.0, 0.0),
+                          padding: EdgeInsetsDirectional.fromSTEB(16, 8, 16, 0),
                           child: Container(
-                            width: 350.0,
-                            height: 100.0,
+                            width: 350,
+                            height: 100,
                             decoration: BoxDecoration(
                               color: Color(0xFF202020),
-                              borderRadius: BorderRadius.circular(12.0),
+                              borderRadius: BorderRadius.circular(12),
                             ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/WhatsAppImage2023-03-04at15.31.57_900x-removebg-preview.png',
-                                    width: 100.0,
-                                    height: 95.0,
-                                    fit: BoxFit.fitHeight,
-                                  ),
-                                ),
-                                Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        50.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      'Long Sleeves',
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .override(
-                                            fontFamily: 'Poppins',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBtnText,
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleMediumFamily),
-                                          ),
+                            child: InkWell(
+                                  onTap: () async {
+                                String _url = 'http://127.0.0.1:5000/edit/Long-Sleeve Shirt';
+                                _model.apiResultikd = await LongSlSHCall.call();
+                                if ((_model.apiResultikd?.succeeded ?? true)) {
+                                      var response = await http.get(Uri.parse(_url));
+                                      var imageList = jsonDecode(response.body)['img_name_list'];
+                                      if (imageList.length > 0) {
+                                        setState(() {
+                                          GlobalData.imagePath1 = 'http://127.0.0.1:5000/tshirt/' + imageList[0];
+                                          GlobalData.imagePath2 = 'http://127.0.0.1:5000/tshirt/' + imageList[1];
+                                          GlobalData.imagePath3 = 'http://127.0.0.1:5000/tshirt/' + imageList[2];
+                    
+                                          });
+                                        }
+                             
+                                    context.pushNamed(
+                                    'Home_Page',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType: PageTransitionType.fade,
+                                      ),
+                                    },
+                                  );
+                                }
+
+                                setState(() {});
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: Image.asset(
+                                      'assets/images/WhatsAppImage2023-03-04at15.31.57_900x-removebg-preview.png',
+                                      width: 100,
+                                      height: 95,
+                                      fit: BoxFit.fitHeight,
                                     ),
                                   ),
-                                ),
-                              ],
+                                  Align(
+                                    alignment: AlignmentDirectional(0, 0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(50, 0, 0, 0),
+                                      child: Text(
+                                        'Long Sleeves',
+                                        style: FlutterFlowTheme.of(context).titleMedium.override(
+                                              fontFamily: 'Poppins',
+                                              color: FlutterFlowTheme.of(context).primaryBtnText,
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w500,
+                                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                                  FlutterFlowTheme.of(context).titleMediumFamily),
+                                            ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       ),
+
                       Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
