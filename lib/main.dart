@@ -7,6 +7,7 @@ import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
@@ -70,6 +71,15 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+class GlobalData {
+  static String imagePath1 = "https://via.placeholder.com/300x300.png?text=No+Image";
+  static String imagePath2 = "https://via.placeholder.com/300x300.png?text=No+Image";
+  static String imagePath3 = "https://via.placeholder.com/300x300.png?text=No+Image";
+}
+
+
+
+
 
 class NavBarPage extends StatefulWidget {
   NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
@@ -83,7 +93,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'user_guide';
+  String _currentPageName = 'Home_Page';
   late Widget? _currentPage;
 
   @override
@@ -96,48 +106,47 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'user_guide': UserGuideWidget(),
       'Home_Page': HomePageWidget(),
+      'Try_on': TryOnWidget(),
+      'user_guide': UserGuideWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: (i) => setState(() {
+      bottomNavigationBar: GNav(
+        selectedIndex: currentIndex,
+        onTabChange: (i) => setState(() {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
         backgroundColor: Color(0xFF1A1A1C),
-        selectedItemColor: Color(0xFFAEFA24),
-        unselectedItemColor: Color(0xFFC5C5CF),
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.supervisor_account_outlined,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.supervisor_account_outlined,
-              size: 28.0,
-            ),
-            label: '  Guide',
-            tooltip: '',
+        color: Color(0xFFC5C5CF),
+        activeColor: Color(0xFFAEFA24),
+        tabBackgroundColor: Color(0x00000000),
+        tabBorderRadius: 100.0,
+        tabMargin: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 30.0),
+        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+        gap: 2.0,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        duration: Duration(milliseconds: 500),
+        haptic: true,
+        tabs: [
+          GButton(
+            icon: Icons.home_rounded,
+            text: ' Home',
+            iconSize: 24.0,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_sharp,
-              size: 24.0,
-            ),
-            activeIcon: FaIcon(
-              FontAwesomeIcons.home,
-              size: 28.0,
-            ),
-            label: ' Home',
-            tooltip: '',
+          GButton(
+            icon: currentIndex == 1 ? Icons.view_in_ar : Icons.view_in_ar,
+            text: 'TryOn',
+            iconSize: 24.0,
+          ),
+          GButton(
+            icon: currentIndex == 2
+                ? Icons.supervisor_account_outlined
+                : Icons.supervisor_account_outlined,
+            text: '  Guide',
+            iconSize: 24.0,
           )
         ],
       ),

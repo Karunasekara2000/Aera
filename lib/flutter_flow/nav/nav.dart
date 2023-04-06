@@ -29,12 +29,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => NavBarPage(),
+      errorBuilder: (context, _) => SplashScreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => NavBarPage(),
+          builder: (context, _) => SplashScreenWidget(),
           routes: [
             FFRoute(
               name: 'user_guide',
@@ -54,6 +54,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Home_Page')
                   : HomePageWidget(),
+            ),
+            FFRoute(
+              name: 'Try_on',
+              path: 'tryOn',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Try_on')
+                  : TryOnWidget(),
+            ),
+            FFRoute(
+              name: 'User_Preference',
+              path: 'userPreference',
+              builder: (context, params) => UserPreferenceWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

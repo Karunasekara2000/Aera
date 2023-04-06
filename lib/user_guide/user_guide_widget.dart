@@ -1,6 +1,5 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -49,11 +48,14 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  'assets/images/logo.png',
-                  width: 174.7,
-                  height: 100.0,
-                  fit: BoxFit.cover,
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    width: 200.0,
+                    height: 100.0,
+                    fit: BoxFit.fitHeight,
+                  ),
                 ),
               ],
             ),
@@ -87,14 +89,21 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 20.0),
-                                        child: SvgPicture.asset(
-                                          'assets/images/Online_shopping-pana.svg',
-                                          width: 350.0,
-                                          height: 300.0,
-                                          fit: BoxFit.fitWidth,
+                                      Expanded(
+                                        child: Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 20.0),
+                                            child: SvgPicture.asset(
+                                              'assets/images/Online_shopping-pana.svg',
+                                              width: 350.0,
+                                              height: 300.0,
+                                              fit: BoxFit.contain,
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -112,10 +121,7 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .headlineSmallFamily,
+                                                  fontFamily: 'Poppins',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryBtnText,
@@ -143,7 +149,7 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .titleSmall
                                                 .override(
-                                                  fontFamily: 'Outfit',
+                                                  fontFamily: 'Poppins',
                                                   color: Color(0xFF57636C),
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.normal,
@@ -199,10 +205,7 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .headlineSmallFamily,
+                                                  fontFamily: 'Poppins',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryBtnText,
@@ -230,7 +233,7 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .titleSmall
                                                 .override(
-                                                  fontFamily: 'Outfit',
+                                                  fontFamily: 'Poppins',
                                                   color: Color(0xFF57636C),
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.normal,
@@ -290,10 +293,7 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .headlineSmall
                                                       .override(
-                                                        fontFamily:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .headlineSmallFamily,
+                                                        fontFamily: 'Poppins',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -319,12 +319,12 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                                       children: [
                                         Expanded(
                                           child: Text(
-                                            'Just tap on purchase button for complete your purchase',
+                                            'Simply complete your purchase',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .titleSmall
                                                 .override(
-                                                  fontFamily: 'Outfit',
+                                                  fontFamily: 'Poppins',
                                                   color: Color(0xFF57636C),
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.normal,
@@ -381,48 +381,6 @@ class _UserGuideWidgetState extends State<UserGuideWidget> {
                 ),
               ),
             ],
-          ),
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      context.pushNamed('Home_Page');
-                    },
-                    text: 'Continue',
-                    options: FFButtonOptions(
-                      width: 200.0,
-                      height: 50.0,
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: Color(0xFFAEFA24),
-                      textStyle: FlutterFlowTheme.of(context)
-                          .titleMedium
-                          .override(
-                            fontFamily: 'Lexend Deca',
-                            color: Color(0xFF0F1113),
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w500,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).titleMediumFamily),
-                          ),
-                      elevation: 2.0,
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                        width: 1.0,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
           ),
         ],
       ),
