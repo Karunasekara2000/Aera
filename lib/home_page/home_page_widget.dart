@@ -1,3 +1,5 @@
+import 'package:aera_a_r/main.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
+
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({Key? key}) : super(key: key);
@@ -132,13 +135,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               ),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
-                                child: Image.asset(
-                                  'assets/images/Frame_31.png',
+                                child: Image.network(
+                                  GlobalData.imagePathShortSL,
                                   width: 183.0,
                                   height: 216.0,
-                                  fit: BoxFit.none,
+                                  fit: BoxFit.fitHeight,
                                 ),
                               ),
+                                                                                 
                             ),
                           ),
                           Padding(

@@ -1,3 +1,5 @@
+import 'package:aera_a_r/main.dart';
+import 'package:http/http.dart' as http;
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -7,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'user_preference_model.dart';
 export 'user_preference_model.dart';
+
 
 class UserPreferenceWidget extends StatefulWidget {
   const UserPreferenceWidget({Key? key}) : super(key: key);
@@ -85,27 +88,35 @@ class _UserPreferenceWidgetState extends State<UserPreferenceWidget> {
                             ),
                             child: InkWell(
                               onTap: () async {
+                                String _url = 'https://fbf2-2402-4000-12c0-4a3f-70ce-8ce5-68cd-433e.in.ngrok.io/edit/Short-Sleeve Shirt';
                                 _model.apiResultikd = await LongSlSHCall.call();
                                 if ((_model.apiResultikd?.succeeded ?? true)) {
-                                  await showDialog(
-                                    context: context,
-                                    builder: (alertDialogContext) {
-                                      return AlertDialog(
-                                        title: Text('HEllo'),
-                                        content: Text(
-                                            (_model.apiResultikd?.jsonBody ??
-                                                    '')
-                                                .toString()),
-                                        actions: [
-                                          TextButton(
-                                            onPressed: () => Navigator.pop(
-                                                alertDialogContext),
-                                            child: Text('Ok'),
-                                          ),
-                                        ],
-                                      );
-                                    },
-                                  );
+                                      var response = await http.get(Uri.parse(_url));
+                                      var imageList = jsonDecode(response.body)['img_name_list'];
+                                      if (imageList.length > 0) {
+                                        setState(() {
+                                          GlobalData.imagePathShortSL = 'http://127.0.0.1:5000/tshirt/' + imageList[0];
+                                          });
+                                        }
+                                  // await showDialog(
+                                  //   context: context,
+                                  //   builder: (alertDialogContext) {
+                                  //     return AlertDialog(
+                                  //       title: Text('HEllo'),
+                                  //       content: Text(
+                                  //           (_model.apiResultikd?.jsonBody ??
+                                  //                   '')
+                                  //               .toString()),
+                                  //       actions: [
+                                  //         TextButton(
+                                  //           onPressed: () => Navigator.pop(
+                                  //               alertDialogContext),
+                                  //           child: Text('Ok'),
+                                  //         ),
+                                  //       ],
+                                  //     );
+                                  //   },
+                                  // );
 
                                   context.pushNamed(
                                     'Home_Page',

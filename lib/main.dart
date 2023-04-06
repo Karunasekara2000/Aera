@@ -71,6 +71,10 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+class GlobalData {
+  static String imagePathShortSL = "https://via.placeholder.com/300x300.png?text=No+Image";
+}
+
 
 class NavBarPage extends StatefulWidget {
   NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
