@@ -14,7 +14,7 @@ class LongSlSHCall {
     return ApiManager.instance.makeApiCall(
       callName: 'LongSlSH',
       apiUrl:
-          'https://fbf2-2402-4000-12c0-4a3f-70ce-8ce5-68cd-433e.in.ngrok.io/edit/Long-Sleeve Shirt',
+          'http://127.0.0.1:5000/edit/Long-Sleeve Shirt',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
