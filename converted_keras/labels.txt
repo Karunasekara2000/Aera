@@ -1,0 +1,3 @@
+0 Short-Sleeve Shirt
+1 Long-Sleeve Shirt
+2 Skinny
